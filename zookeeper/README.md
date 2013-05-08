@@ -1,4 +1,3 @@
-=================================
 Collectd Plugin: Apache Zookeeper
 =================================
 
@@ -9,9 +8,9 @@ the Collectd Text Protocol.
 Installation and Configuration
 ------------------------------
 
-1. Copy zookeeper.sh to your Collectd plugin directory
-2. Add this to your collectd configuration file ::
-
+First, copy zookeeper.sh to your Collectd plugin directory
+Then, add this to your collectd configuration file:
+   
     LoadPlugin "exec"
     <Plugin exec>
         Exec "nobody" "/etc/collectd/conf/plugins/zookeeper.sh"
