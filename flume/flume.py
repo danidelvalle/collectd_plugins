@@ -142,7 +142,7 @@ def print_metric(group, name, value):
     try:
         if METRICS[name] is 'counter':
             print '%s-%s/counter-%s" interval=%d %d:%d' % (prefix, clean_group_name,
-                                                           name, int(options.interval),
+                                                           name, int(float(options.interval)),
                                                            int(time.time()), int(value))
         if METRICS[name] is 'gauge':
             print '%s-%s/gauge-%s" %d:%s' % (prefix, clean_group_name,
@@ -164,6 +164,6 @@ def main():
                 # Generate a collectd-happy version of the metric name
                 print_metric(group, key, value)
 
-        time.sleep(int(options.interval))
+        time.sleep(int(float(options.interval)))
 
 main()
