@@ -100,6 +100,15 @@ METRICS = {
     'EventAcceptedCount': 'counter',
     'AppendAcceptedCount': 'counter',
     'AppendReceivedCount': 'counter',
+    
+    # flume-ftp-source metrics    
+    'CountSizeProc': 'counter',
+    'EventCount': 'counter',
+    'FilesProcCount': 'counter',
+    'FilesCount': 'counter',
+    'FilesProcCountError': 'counter',
+    'CountModProc': 'counter',
+
 }
 
 usage = "usage: %prog -p <prefix> -u url"
